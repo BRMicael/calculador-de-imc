@@ -14,14 +14,14 @@ import React, {useState} from 'react';
             
             <label htmlFor="">Digite seu peso: {peso}</label>
             <br></br>
-            <input type="number" value={peso}
+            <input type="number" value={peso} placeholder="Exemplo: 60kg"
             onChange={evento => setPeso(evento.target.value)}/>
     
             <br></br>
 
             <label htmlFor="">Digite sua altura: {altura} </label>
             <br></br>
-            <input type="number" value={altura} id='hight' 
+            <input type="number" value={altura} id='hight' placeholder="Exemplo: 1,70m"
             onChange={evento => setAltura(evento.target.value)}/>
             <br></br>
             <input type="button" value="Gerar resultado" id="button"
@@ -30,20 +30,23 @@ import React, {useState} from 'react';
                 let alturavalor = {altura}.altura
             
                 let imc = pesovalor / (Math.pow(alturavalor, 2))
-                
                 let classificação
                 
                 if(imc < 18.5){
-                    classificação = 'o peso abaixo do normal';
+                    classificação = 'o peso abaixo do normal.';
                 }else if( imc <= 24.9){
-                    classificação = 'o peso normal'
+                    classificação = 'o peso normal.'
                 }else if(imc <= 29.9){
-                    classificação= "sobrepeso"
+                    classificação= "sobrepeso."
                 }else{
-                    classificação = 'obesidade'
+                    classificação = 'obesidade.'
                 }
 
-                document.getElementById("imc").innerHTML="Seu imc é: " + imc + ", portanto, você se encontra com " + classificação;
+                if(imc > 0){
+
+                    document.getElementById("imc").innerHTML="Seu imc é: " + imc + ", portanto, você se encontra com " + classificação;
+                }
+
 
 
                 

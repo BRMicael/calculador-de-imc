@@ -18,7 +18,6 @@ export default props => (
 
     </div>
     <footer>
- <p>adsa</p>
 </footer>
     </>
 )

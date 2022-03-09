@@ -2,7 +2,10 @@ import React from "react";
 import './App.css';
 import Form from './form/Form'
 
-export default props => (
+const App = () => {
+
+    return (
+
     <>
     <header>
     <h1>Calcule seu IMC</h1>
@@ -10,15 +13,17 @@ export default props => (
     </header>
     <div className="App">
    
-        <div>
+        <div className="Form">
             <Form></Form>
         </div>
-
-
 
     </div>
     <footer>
 </footer>
     </>
-)
+
+    )
+}
+
+export default App;
 

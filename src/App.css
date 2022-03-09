@@ -11,19 +11,24 @@
   justify-content: center;
   align-items: center;
   padding: 5rem;
-  background-color: #AC46A1;
+  background-color: rgb(240, 240, 240);
 }
 
 header {
-  height: 100%;
+  height: 15vh;
   width: 100%;
-  background-color: #EA698B;
+  background-color: #5dd1ff;
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items: center;
   padding-bottom: 2rem;
   padding-top: 4rem;
+}
+
+#Form {
+  height: 75vh;
+  position: fixed;
 }
 
 
@@ -54,9 +59,16 @@ input {
   border: 1px solid #000000;
   border-radius: 10px;
   margin-bottom: 20px;
+  background-color: rgb(201, 201, 201);
+  transition:  0.1s;
 }
 
-input#hight {
+input#weight:hover, input#high:hover {
+  background-color: rgb(255, 255, 255)
+
+}
+
+input#high {
   margin-bottom: 40px;
 }
 
@@ -80,11 +92,9 @@ input#button:hover {
 }
 
 footer {
-
-  background-color: #000000;
-  height: 100%;
-  width: 100%;
-  padding: 3rem 0;
+  background-color: rgb(114, 114, 114);
+  height: 10vh;
+  
 }
 
 
@@ -96,6 +106,7 @@ div#res {
   background-color: #fff;
   display:flex;
   width: 322px;
+  height: 80px;
   flex-wrap: wrap;
 
 }
